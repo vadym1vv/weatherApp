@@ -10,7 +10,7 @@ import CoreData
 
 class CoreDataSettings: ObservableObject {
     static let shared: CoreDataSettings = {
-        let container = NSPersistentContainer(name: "PlotsCity")
+        let container = NSPersistentContainer(name: "WeatherNotes")
         
         container.loadPersistentStores { _, error in
             if let error = error {

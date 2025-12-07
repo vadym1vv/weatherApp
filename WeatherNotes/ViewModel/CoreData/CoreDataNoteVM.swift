@@ -16,10 +16,10 @@ class CoreDataNoteVM: CoreDataSettings {
         fetchEntity()
     }
     
-    func newNote(noteTitle: String?, weatherDegree: Int, weatherTitle: String, weatherSystemTitle: String, location: String, noteDate: Date = .now) {
+    func newNote(noteTitle: String?, weatherDegree: String, weatherTitle: String, weatherSystemTitle: String, location: String, noteDate: Date = .now) {
         let newNoteEntity = NoteEntity(context: container.viewContext)
         newNoteEntity.noteTitle = noteTitle
-        newNoteEntity.weatherDegree = Int32(weatherDegree)
+        newNoteEntity.weatherDegree = weatherDegree
         newNoteEntity.weatherTitle = weatherTitle
         newNoteEntity.weatherSystemTitle = weatherSystemTitle
         newNoteEntity.location = location

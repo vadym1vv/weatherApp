@@ -9,8 +9,9 @@ import SwiftUI
 
 struct NewNoteView: View {
     
-    
     @EnvironmentObject private var coreDataNoteVM: CoreDataNoteVM
+    @EnvironmentObject private var router: Router
+    @EnvironmentObject private var weatherViewModel: WeatherViewModel
     
     @State private var title: String? = nil
     
@@ -23,29 +24,54 @@ struct NewNoteView: View {
     
     var body: some View {
         VStack {
-            WeatherInfoComponent(weatherTitle: "Wind", weatherSystemTitle: "sun.max", weatherDegree: -7, location: "Kyiv")
-            Spacer()
-            TextField("Note Title", text: Binding(get: {
-                title ?? ""
-            }, set: { userInput in
-                title = userInput
-            }))
-            .frame(height: 44)
-            .background(.gray)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            Spacer()
-            Button {
-                coreDataNoteVM.newNote(noteTitle: title, weatherDegree: -7, weatherTitle: "Wind", weatherSystemTitle: "sun.max", location: "Kyiv")
-            } label: {
-                Text("Save")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 44)
+            TopBarNavigationComponent(
+                leadingView:
+                    Button {
+                        router.path.removeLast()
+                    } label:{
+                        HStack {
+                            Image(systemName: "chevron.left")
+                            Text("back")
+                        }
+                    },
+                centerView:
+                    Text("New Note"),
+                trailingView:
+                    EmptyView()
+            )
+            .foregroundStyle(ColorEnum.textSecondary.color)
+            VStack {
+                WeatherInfoComponent(weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionCode.rawValue, weatherDegree: weatherViewModel.temperature, location: weatherViewModel.city)
+                Spacer()
+                TextField("Note Title", text: Binding(get: {
+                    title ?? ""
+                }, set: { userInput in
+                    title = userInput
+                }))
+                .padding(.horizontal)
+                .frame(height: 60)
+                .background(ColorEnum.secondaryBackground.color)
+                .foregroundStyle(ColorEnum.textPrimary.color)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                Spacer()
+                Button {
+                    coreDataNoteVM.newNote(noteTitle: title, weatherDegree: weatherViewModel.temperature, weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionTitle, location: weatherViewModel.city)
+                } label: {
+                    Text("Save")
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 44)
+                        .foregroundStyle(isSaveAvailable ? ColorEnum.textPrimary.color : ColorEnum.textDisabled.color)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(isSaveAvailable ? ColorEnum.accentPrimary.color : ColorEnum.accentPrimary.color.opacity(0.5))
+                .disabled(!isSaveAvailable)
+                .padding(.bottom)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(isSaveAvailable ? .gray : .yellow)
-            .disabled(!isSaveAvailable)
-            .padding(.bottom)
+            .padding(.horizontal)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(ColorEnum.primaryBackground.color)
+        .navigationBarHidden(true)
     }
 }
 
@@ -53,5 +79,7 @@ struct NewNoteView_Previews: PreviewProvider {
     static var previews: some View {
         NewNoteView()
             .environmentObject(CoreDataNoteVM())
+            .environmentObject(Router())
+            .environmentObject(WeatherViewModel())
     }
 }
