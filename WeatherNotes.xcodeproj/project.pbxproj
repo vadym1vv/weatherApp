@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935BB1542EE629CC00CD7ECB /* NetworkMonitorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935BB1532EE629CC00CD7ECB /* NetworkMonitorVM.swift */; };
 		D50AD3732EE5EB730020DECC /* NoteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3722EE5EB730020DECC /* NoteComponent.swift */; };
 		D50AD3752EE5EE980020DECC /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3742EE5EE980020DECC /* NoteListView.swift */; };
 		D50AD3782EE5F3B70020DECC /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3772EE5F3B70020DECC /* WeatherViewModel.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		935BB1532EE629CC00CD7ECB /* NetworkMonitorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorVM.swift; sourceTree = "<group>"; };
 		D50AD3722EE5EB730020DECC /* NoteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteComponent.swift; sourceTree = "<group>"; };
 		D50AD3742EE5EE980020DECC /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		D50AD3762EE5F3670020DECC /* WeatherNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherNotes.entitlements; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D5D5B6052EE5D94D00E0C9EA /* CoreData */,
 				D50AD3772EE5F3B70020DECC /* WeatherViewModel.swift */,
 				D50AD37C2EE5FC5C0020DECC /* Router.swift */,
+				935BB1532EE629CC00CD7ECB /* NetworkMonitorVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				D50AD3732EE5EB730020DECC /* NoteComponent.swift in Sources */,
 				D50AD3812EE600700020DECC /* TopBarNavigationComponent.swift in Sources */,
 				D5D5B60F2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift in Sources */,
+				935BB1542EE629CC00CD7ECB /* NetworkMonitorVM.swift in Sources */,
 				D50AD3752EE5EE980020DECC /* NoteListView.swift in Sources */,
 				D50AD3782EE5F3B70020DECC /* WeatherViewModel.swift in Sources */,
 				D5D5B5F02EE5CFF000E0C9EA /* ContentView.swift in Sources */,

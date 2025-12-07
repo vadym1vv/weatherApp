@@ -38,6 +38,8 @@ class WeatherViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     nonisolated func locationManager(_ manager: CLLocationManager,
                                      didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
+        manager.stopUpdatingLocation()
+        
         Task { await updateWeather(for: location) }
     }
     
@@ -48,9 +50,10 @@ class WeatherViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             
             temperature = "\(Int(current.temperature.value))°"
             conditionTitle = current.condition.description
+            print("conditionTitle\(conditionTitle)")
             
             conditionCode = WeatherConditionCodeEnum(from: current.condition)
-            
+            print("conditionCode\(conditionCode)")
             let placemarks = try await CLGeocoder().reverseGeocodeLocation(location)
             city = placemarks.first?.locality ?? "Unknown"
             
@@ -63,6 +66,6 @@ class WeatherViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
 extension WeatherConditionCodeEnum {
     init(from condition: WeatherCondition) {
-        self = WeatherConditionCodeEnum(rawValue: condition.rawValue) ?? .unknown
+        self = WeatherConditionCodeEnum(rawValue: condition.rawValue.lowercased()) ?? .unknown
     }
 }

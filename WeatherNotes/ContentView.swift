@@ -19,7 +19,7 @@ struct ContentView: View {
         NavigationStack(path: $router.path) {
             VStack {
                 VStack {
-                    WeatherInfoComponent(weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionCode.rawValue, weatherDegree: weatherViewModel.temperature, location: weatherViewModel.city)
+                    WeatherInfoComponent(weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionCode.systemIcon, weatherDegree: weatherViewModel.temperature, location: weatherViewModel.city)
                         .frame(height: UIScreen.main.bounds.height / 2)
                     Spacer()
                     HStack {
