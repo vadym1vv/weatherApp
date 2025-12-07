@@ -41,7 +41,7 @@ struct NewNoteView: View {
             )
             .foregroundStyle(ColorEnum.textSecondary.color)
             VStack {
-                WeatherInfoComponent(weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionCode.rawValue, weatherDegree: weatherViewModel.temperature, location: weatherViewModel.city)
+                WeatherInfoComponent(weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionCode.systemIcon, weatherDegree: weatherViewModel.temperature, location: weatherViewModel.city)
                 Spacer()
                 TextField("Note Title", text: Binding(get: {
                     title ?? ""
@@ -55,7 +55,8 @@ struct NewNoteView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 Spacer()
                 Button {
-                    coreDataNoteVM.newNote(noteTitle: title, weatherDegree: weatherViewModel.temperature, weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionTitle, location: weatherViewModel.city)
+                    coreDataNoteVM.newNote(noteTitle: title, weatherDegree: weatherViewModel.temperature, weatherTitle: weatherViewModel.conditionTitle, weatherSystemTitle: weatherViewModel.conditionCode.systemIcon, location: weatherViewModel.city)
+                    router.path.removeLast()
                 } label: {
                     Text("Save")
                         .frame(maxWidth: .infinity)

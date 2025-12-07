@@ -17,10 +17,12 @@ struct WeatherInfoComponent: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "sun.max")
+            Image(systemName: weatherSystemTitle)
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(ColorEnum.textSecondary.color)
+            Text(weatherTitle)
+                .font(.system(size: fontSize, weight: .bold, design: .rounded))
             
             HStack {
                 Text(location)
@@ -34,6 +36,6 @@ struct WeatherInfoComponent: View {
 
 struct WeatherInfoComponent_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherInfoComponent(weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.clear.rawValue, weatherDegree: "-5", location: "Kyiv")
+        WeatherInfoComponent(weatherTitle: "clear", weatherSystemTitle: WeatherConditionCodeEnum.clear.systemIcon, weatherDegree: "-5", location: "Kyiv")
     }
 }

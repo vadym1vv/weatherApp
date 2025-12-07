@@ -43,8 +43,8 @@ struct NoteComponent: View {
 struct NoteComponent_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            NoteComponent(noteTitle: "Running", weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.snow.rawValue, weatherDegree: "-5", location: "Kyiv", date: .now)
-            NoteComponent(noteTitle: "Running asfas fas fasf as f asf af asf asf asf af asf asf asf asf asf asf asf asf asf asf asf as fas fasf asf as fasf asf asf as fas f", weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.snow.rawValue, weatherDegree: "-5", location: "Kyiv", date: .now)
+            NoteComponent(noteTitle: "Running", weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.snow.systemIcon, weatherDegree: "-5", location: "Kyiv", date: .now)
+            NoteComponent(noteTitle: "Running asfas fas fasf as f asf af asf asf asf af asf asf asf asf asf asf asf asf asf asf asf as fas fasf asf as fasf asf asf as fas f", weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.snow.systemIcon, weatherDegree: "-5", location: "Kyiv", date: .now)
         }
             .padding()
     }
