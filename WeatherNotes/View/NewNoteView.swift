@@ -23,15 +23,7 @@ struct NewNoteView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "sun.max")
-                .resizable()
-                .scaledToFit()
-                .frame(maxHeight: UIScreen.main.bounds.height / 4)
-            
-            Text("7C")
-                .fontWeight(.heavy)
-//                .font(.system(.largeTitle))
-                .font(.system(size: 60, weight: .bold, design: .rounded))
+            WeatherInfoComponent(weatherTitle: "Wind", weatherSystemTitle: "sun.max", weatherDegree: -7, location: "Kyiv")
             Spacer()
             TextField("Note Title", text: Binding(get: {
                 title ?? ""
@@ -43,7 +35,7 @@ struct NewNoteView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             Spacer()
             Button {
-                coreDataNoteVM.newNote(title: title, weatherDegree: -7, weatherStatus: "sun.max", location: "Kiev")
+                coreDataNoteVM.newNote(noteTitle: title, weatherDegree: -7, weatherTitle: "Wind", weatherSystemTitle: "sun.max", location: "Kyiv")
             } label: {
                 Text("Save")
                     .frame(maxWidth: .infinity)

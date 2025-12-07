@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50AD3732EE5EB730020DECC /* NoteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3722EE5EB730020DECC /* NoteComponent.swift */; };
+		D50AD3752EE5EE980020DECC /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3742EE5EE980020DECC /* NoteListView.swift */; };
 		D5D5B5EE2EE5CFF000E0C9EA /* WeatherNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B5ED2EE5CFF000E0C9EA /* WeatherNotesApp.swift */; };
 		D5D5B5F02EE5CFF000E0C9EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B5EF2EE5CFF000E0C9EA /* ContentView.swift */; };
 		D5D5B5F22EE5CFF200E0C9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D5B5F12EE5CFF200E0C9EA /* Assets.xcassets */; };
@@ -15,9 +17,13 @@
 		D5D5B6012EE5D4AA00E0C9EA /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B6002EE5D4AA00E0C9EA /* NewNoteView.swift */; };
 		D5D5B6072EE5D95800E0C9EA /* CoreDataSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B6062EE5D95800E0C9EA /* CoreDataSettings.swift */; };
 		D5D5B6092EE5D9EB00E0C9EA /* CoreDataNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B6082EE5D9EB00E0C9EA /* CoreDataNoteVM.swift */; };
+		D5D5B60B2EE5E45E00E0C9EA /* WeatherInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B60A2EE5E45E00E0C9EA /* WeatherInfoComponent.swift */; };
+		D5D5B60F2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B60E2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D50AD3722EE5EB730020DECC /* NoteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteComponent.swift; sourceTree = "<group>"; };
+		D50AD3742EE5EE980020DECC /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		D5D5B5EA2EE5CFF000E0C9EA /* WeatherNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D5B5ED2EE5CFF000E0C9EA /* WeatherNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNotesApp.swift; sourceTree = "<group>"; };
 		D5D5B5EF2EE5CFF000E0C9EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +33,8 @@
 		D5D5B6002EE5D4AA00E0C9EA /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 		D5D5B6062EE5D95800E0C9EA /* CoreDataSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSettings.swift; sourceTree = "<group>"; };
 		D5D5B6082EE5D9EB00E0C9EA /* CoreDataNoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataNoteVM.swift; sourceTree = "<group>"; };
+		D5D5B60A2EE5E45E00E0C9EA /* WeatherInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoComponent.swift; sourceTree = "<group>"; };
+		D5D5B60E2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionCodeEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		D5D5B5EC2EE5CFF000E0C9EA /* WeatherNotes */ = {
 			isa = PBXGroup;
 			children = (
+				D5D5B60C2EE5E60E00E0C9EA /* Model */,
 				D5D5B6042EE5D94600E0C9EA /* ViewModel */,
 				D5D5B6022EE5D57000E0C9EA /* View */,
 				D5D5B5ED2EE5CFF000E0C9EA /* WeatherNotesApp.swift */,
@@ -83,6 +92,7 @@
 			children = (
 				D5D5B6002EE5D4AA00E0C9EA /* NewNoteView.swift */,
 				D5D5B6032EE5D57500E0C9EA /* Component */,
+				D50AD3742EE5EE980020DECC /* NoteListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +100,8 @@
 		D5D5B6032EE5D57500E0C9EA /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				D5D5B60A2EE5E45E00E0C9EA /* WeatherInfoComponent.swift */,
+				D50AD3722EE5EB730020DECC /* NoteComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -109,6 +121,22 @@
 				D5D5B6082EE5D9EB00E0C9EA /* CoreDataNoteVM.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D5D5B60C2EE5E60E00E0C9EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5D5B60D2EE5E61400E0C9EA /* EnumModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5D5B60D2EE5E61400E0C9EA /* EnumModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5D5B60E2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift */,
+			);
+			path = EnumModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50AD3732EE5EB730020DECC /* NoteComponent.swift in Sources */,
+				D5D5B60F2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift in Sources */,
+				D50AD3752EE5EE980020DECC /* NoteListView.swift in Sources */,
 				D5D5B5F02EE5CFF000E0C9EA /* ContentView.swift in Sources */,
 				D5D5B5FA2EE5CFF200E0C9EA /* WeatherNotes.xcdatamodeld in Sources */,
 				D5D5B5EE2EE5CFF000E0C9EA /* WeatherNotesApp.swift in Sources */,
+				D5D5B60B2EE5E45E00E0C9EA /* WeatherInfoComponent.swift in Sources */,
 				D5D5B6012EE5D4AA00E0C9EA /* NewNoteView.swift in Sources */,
 				D5D5B6072EE5D95800E0C9EA /* CoreDataSettings.swift in Sources */,
 				D5D5B6092EE5D9EB00E0C9EA /* CoreDataNoteVM.swift in Sources */,
