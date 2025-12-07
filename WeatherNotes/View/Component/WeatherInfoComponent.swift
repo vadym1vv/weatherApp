@@ -11,7 +11,7 @@ struct WeatherInfoComponent: View {
     
     let weatherTitle: String
     let weatherSystemTitle: String
-    let weatherDegree: Int
+    let weatherDegree: String
     let location: String
     var fontSize: CGFloat = 60
     
@@ -20,18 +20,20 @@ struct WeatherInfoComponent: View {
             Image(systemName: "sun.max")
                 .resizable()
                 .scaledToFit()
+                .foregroundStyle(ColorEnum.textSecondary.color)
             
             HStack {
                 Text(location)
-                Text("7C")
+                Text(weatherDegree)
             }
             .font(.system(size: fontSize, weight: .bold, design: .rounded))
+            .foregroundStyle(ColorEnum.textPrimary.color)
         }
     }
 }
 
 struct WeatherInfoComponent_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherInfoComponent(weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.clear.rawValue, weatherDegree: -5, location: "Kyiv")
+        WeatherInfoComponent(weatherTitle: "Wind", weatherSystemTitle: WeatherConditionCodeEnum.clear.rawValue, weatherDegree: "-5", location: "Kyiv")
     }
 }

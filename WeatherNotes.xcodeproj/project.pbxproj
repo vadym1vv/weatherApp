@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D50AD3732EE5EB730020DECC /* NoteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3722EE5EB730020DECC /* NoteComponent.swift */; };
 		D50AD3752EE5EE980020DECC /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3742EE5EE980020DECC /* NoteListView.swift */; };
+		D50AD3782EE5F3B70020DECC /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3772EE5F3B70020DECC /* WeatherViewModel.swift */; };
+		D50AD37B2EE5FB790020DECC /* NavigationPathEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD37A2EE5FB790020DECC /* NavigationPathEnum.swift */; };
+		D50AD37D2EE5FC5C0020DECC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD37C2EE5FC5C0020DECC /* Router.swift */; };
+		D50AD37F2EE5FDD40020DECC /* NoteLabelNavigationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD37E2EE5FDD40020DECC /* NoteLabelNavigationComponent.swift */; };
+		D50AD3812EE600700020DECC /* TopBarNavigationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3802EE600700020DECC /* TopBarNavigationComponent.swift */; };
+		D50AD3832EE609090020DECC /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AD3822EE609090020DECC /* ColorEnum.swift */; };
 		D5D5B5EE2EE5CFF000E0C9EA /* WeatherNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B5ED2EE5CFF000E0C9EA /* WeatherNotesApp.swift */; };
 		D5D5B5F02EE5CFF000E0C9EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D5B5EF2EE5CFF000E0C9EA /* ContentView.swift */; };
 		D5D5B5F22EE5CFF200E0C9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D5B5F12EE5CFF200E0C9EA /* Assets.xcassets */; };
@@ -24,6 +30,14 @@
 /* Begin PBXFileReference section */
 		D50AD3722EE5EB730020DECC /* NoteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteComponent.swift; sourceTree = "<group>"; };
 		D50AD3742EE5EE980020DECC /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		D50AD3762EE5F3670020DECC /* WeatherNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherNotes.entitlements; sourceTree = "<group>"; };
+		D50AD3772EE5F3B70020DECC /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		D50AD3792EE5F5840020DECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D50AD37A2EE5FB790020DECC /* NavigationPathEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathEnum.swift; sourceTree = "<group>"; };
+		D50AD37C2EE5FC5C0020DECC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D50AD37E2EE5FDD40020DECC /* NoteLabelNavigationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteLabelNavigationComponent.swift; sourceTree = "<group>"; };
+		D50AD3802EE600700020DECC /* TopBarNavigationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarNavigationComponent.swift; sourceTree = "<group>"; };
+		D50AD3822EE609090020DECC /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
 		D5D5B5EA2EE5CFF000E0C9EA /* WeatherNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D5B5ED2EE5CFF000E0C9EA /* WeatherNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNotesApp.swift; sourceTree = "<group>"; };
 		D5D5B5EF2EE5CFF000E0C9EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +81,8 @@
 		D5D5B5EC2EE5CFF000E0C9EA /* WeatherNotes */ = {
 			isa = PBXGroup;
 			children = (
+				D50AD3792EE5F5840020DECC /* Info.plist */,
+				D50AD3762EE5F3670020DECC /* WeatherNotes.entitlements */,
 				D5D5B60C2EE5E60E00E0C9EA /* Model */,
 				D5D5B6042EE5D94600E0C9EA /* ViewModel */,
 				D5D5B6022EE5D57000E0C9EA /* View */,
@@ -90,9 +106,9 @@
 		D5D5B6022EE5D57000E0C9EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D5D5B6002EE5D4AA00E0C9EA /* NewNoteView.swift */,
 				D5D5B6032EE5D57500E0C9EA /* Component */,
 				D50AD3742EE5EE980020DECC /* NoteListView.swift */,
+				D5D5B6002EE5D4AA00E0C9EA /* NewNoteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +118,8 @@
 			children = (
 				D5D5B60A2EE5E45E00E0C9EA /* WeatherInfoComponent.swift */,
 				D50AD3722EE5EB730020DECC /* NoteComponent.swift */,
+				D50AD37E2EE5FDD40020DECC /* NoteLabelNavigationComponent.swift */,
+				D50AD3802EE600700020DECC /* TopBarNavigationComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -110,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				D5D5B6052EE5D94D00E0C9EA /* CoreData */,
+				D50AD3772EE5F3B70020DECC /* WeatherViewModel.swift */,
+				D50AD37C2EE5FC5C0020DECC /* Router.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -135,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				D5D5B60E2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift */,
+				D50AD37A2EE5FB790020DECC /* NavigationPathEnum.swift */,
+				D50AD3822EE609090020DECC /* ColorEnum.swift */,
 			);
 			path = EnumModel;
 			sourceTree = "<group>";
@@ -210,15 +232,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50AD3732EE5EB730020DECC /* NoteComponent.swift in Sources */,
+				D50AD3812EE600700020DECC /* TopBarNavigationComponent.swift in Sources */,
 				D5D5B60F2EE5E62800E0C9EA /* WeatherConditionCodeEnum.swift in Sources */,
 				D50AD3752EE5EE980020DECC /* NoteListView.swift in Sources */,
+				D50AD3782EE5F3B70020DECC /* WeatherViewModel.swift in Sources */,
 				D5D5B5F02EE5CFF000E0C9EA /* ContentView.swift in Sources */,
 				D5D5B5FA2EE5CFF200E0C9EA /* WeatherNotes.xcdatamodeld in Sources */,
 				D5D5B5EE2EE5CFF000E0C9EA /* WeatherNotesApp.swift in Sources */,
 				D5D5B60B2EE5E45E00E0C9EA /* WeatherInfoComponent.swift in Sources */,
 				D5D5B6012EE5D4AA00E0C9EA /* NewNoteView.swift in Sources */,
+				D50AD37B2EE5FB790020DECC /* NavigationPathEnum.swift in Sources */,
 				D5D5B6072EE5D95800E0C9EA /* CoreDataSettings.swift in Sources */,
 				D5D5B6092EE5D9EB00E0C9EA /* CoreDataNoteVM.swift in Sources */,
+				D50AD37F2EE5FDD40020DECC /* NoteLabelNavigationComponent.swift in Sources */,
+				D50AD3832EE609090020DECC /* ColorEnum.swift in Sources */,
+				D50AD37D2EE5FC5C0020DECC /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,18 +372,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherNotes/WeatherNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 665W8JZLV8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherNotes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,18 +407,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherNotes/WeatherNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 665W8JZLV8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherNotes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
