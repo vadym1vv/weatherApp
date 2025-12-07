@@ -3,8 +3,9 @@
     <entity name="NoteEntity" representedClassName="NoteEntity" syncable="YES" codeGenerationType="class">
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="noteDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="noteTitle" optional="YES" attributeType="String"/>
         <attribute name="weatherDegree" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="weatherStatus" optional="YES" attributeType="String"/>
+        <attribute name="weatherSystemTitle" optional="YES" attributeType="String"/>
+        <attribute name="weatherTitle" optional="YES" attributeType="String"/>
     </entity>
 </model>
